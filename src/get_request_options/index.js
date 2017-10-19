@@ -1,29 +1,29 @@
 // @flow
-import pick from 'lodash.pick';
+import pick from 'lodash.pick'
 
-import type {JsonFetchOptions} from '../index.js.flow';
+import type { JsonFetchOptions } from '../types'
 
 export default function getRequestOptions (jsonFetchOptions: JsonFetchOptions): RequestOptions {
-  const parsedOptions = {};
-  parsedOptions.headers = {};
+  const parsedOptions = {}
+  parsedOptions.headers = {}
 
   if (jsonFetchOptions.body !== undefined) {
-    parsedOptions.body = JSON.stringify(jsonFetchOptions.body);
-    parsedOptions.headers['Content-Type'] = 'application/json';
+    parsedOptions.body = JSON.stringify(jsonFetchOptions.body)
+    parsedOptions.headers['Content-Type'] = 'application/json'
   }
 
   if (jsonFetchOptions.credentials === undefined) {
-    parsedOptions.credentials = 'include';
+    parsedOptions.credentials = 'include'
   }
 
   parsedOptions.headers = Object.assign(
     {},
     {
-      Accept: 'application/json',
+      Accept: 'application/json'
     },
     jsonFetchOptions.headers,
     parsedOptions.headers
-  );
+  )
 
   const pickedOptions = pick(jsonFetchOptions, [
     'agent',
@@ -37,8 +37,8 @@ export default function getRequestOptions (jsonFetchOptions: JsonFetchOptions): 
     'redirect',
     'referrer',
     'referrerPolicy',
-    'timeout',
-  ]);
+    'timeout'
+  ])
 
-  return Object.assign({}, pickedOptions, parsedOptions);
+  return Object.assign({}, pickedOptions, parsedOptions)
 }
