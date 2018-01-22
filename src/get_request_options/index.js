@@ -1,4 +1,5 @@
 // @flow
+
 import pick from 'lodash.pick'
 
 import type { JsonFetchOptions } from '../types'

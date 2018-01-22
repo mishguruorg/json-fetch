@@ -3,7 +3,7 @@ import fetch from 'node-fetch'
 import promiseRetry from 'promise-retry'
 
 import getRequestOptions from './get_request_options'
-import type { JsonFetchOptions, JsonFetchResponse, ShouldRetry } from '.'; // eslint-disable-line
+import type { JsonFetchOptions, JsonFetchResponse, ShouldRetry } from './types.js'; // eslint-disable-line
 
 const DEFAULT_RETRY_OPTIONS = { retries: 0 }
 const DEFAULT_SHOULD_RETRY: ShouldRetry = () => false
