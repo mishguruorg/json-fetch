@@ -20,6 +20,7 @@ export type JsonFetchOptions = {
   retry?: Object,
   timeout?: number,
   expectedStatuses?: Array<number>,
+  rawRequestOptions?: boolean,
 };
 
 export type JsonFetchResponse = {
