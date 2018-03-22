@@ -1,6 +1,6 @@
 {
   "name": "@mishguru/json-fetch",
-  "version": "8.2.0",
+  "version": "8.2.1",
   "description": "A wrapper around ES6 fetch to simplify interacting with JSON APIs.",
   "author": "George Czabania <george@mish.guru>",
   "contributors": [
