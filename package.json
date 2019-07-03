@@ -27,6 +27,7 @@
     "flow": "pkg-flow",
     "lint": "pkg-lint",
     "prepublish": "pkg-build",
+    "postpublish": "git push origin master --tags",
     "test": "NODE_ENV=test_local pkg-test",
     "test-only": "NODE_ENV=test_local pkg-test-only"
   },
